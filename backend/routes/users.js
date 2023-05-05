@@ -53,4 +53,8 @@ router.get('/isAdmin/:id', async (req, res) => {
 
 
 
+<<<<<<< HEAD
 export default router;
+=======
+module.exports = router;
+>>>>>>> parent of 0b27ceb (Update users.js)
