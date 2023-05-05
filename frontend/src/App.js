@@ -20,6 +20,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
+import Inquiry from './pages/package/Inquiry';
 
 function App() {
 
@@ -108,10 +109,9 @@ function App() {
           <Route path="/travel-plan" element={<TravelPlan />} />
           <Route path="/profile" element={<MyProfile />} />
           <Route path="/package/:id" element={<SinglePackage />} />
-            
-
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/inquiry" element={<Inquiry />} />
           </Routes>
         </div>
       </BrowserRouter>
