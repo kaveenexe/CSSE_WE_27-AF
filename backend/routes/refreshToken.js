@@ -1,8 +1,8 @@
-const { Router } = require("express");
-const UserToken = require("../models/UserToken");
-const jwt = require("jsonwebtoken");
-const verifyRefreshToken = require("../utils/verifyRefreshToken");
-const { refreshTokenBodyValidation } = require("../utils/validationSchema");
+import { Router } from "express";
+import UserToken from "../models/UserToken.js";
+import jwt from "jsonwebtoken";
+import verifyRefreshToken from "../utils/verifyRefreshToken.js";
+import { refreshTokenBodyValidation } from "../utils/validationSchema.js";
 
 const router = Router();
 
@@ -50,4 +50,4 @@ router.delete("/", async(req, res) =>{
 });
 
 
-module.exports = router;
+export default router;

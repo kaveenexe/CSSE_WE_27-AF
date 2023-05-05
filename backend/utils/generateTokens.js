@@ -1,5 +1,6 @@
-const jwt = require("jsonwebtoken");
-const UserToken = require("../models/UserToken.js");
+import jwt from "jsonwebtoken";
+import UserToken from "../models/UserToken.js";
+
 
 const generateTokens = async(user)=>{
     try{
@@ -36,4 +37,4 @@ const generateTokens = async(user)=>{
     }
 };
 
-module.exports = generateTokens;
+export default generateTokens;

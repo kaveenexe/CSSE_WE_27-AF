@@ -1,12 +1,11 @@
-
-const { Router } = require("express");
-const User = require("../models/User");
-const mongoose = require("mongoose");
+import { Router } from "express";
+import User from "../models/User.js";
+import mongoose from "mongoose";
 //use to hash password
-const bcrypt = require("bcrypt");
-const { signUpBodyValidation, loginBodyValidation } = require("../utils/validationSchema");
-const generateTokens = require("../utils/generateTokens");
-const UserToken = require("../models/UserToken");
+import bcrypt from "bcrypt";
+import { signUpBodyValidation, loginBodyValidation } from "../utils/validationSchema.js";
+import generateTokens from "../utils/generateTokens.js";
+import UserToken from "../models/UserToken.js";
 
 
 
@@ -139,4 +138,4 @@ router.post("/login", async (req, res) => {
 });
 
 
-module.exports = router;
+export default router;

@@ -1,7 +1,7 @@
 
 //validates the body of the requests
-const Joi = require("joi");
-const passwordComplexity = require("joi-password-complexity");
+import Joi from "joi";
+import passwordComplexity from "joi-password-complexity";
 
 
 //validates the body of the sign up request
@@ -35,4 +35,4 @@ const refreshTokenBodyValidation = (body)=>{
     return schema.validate(body);
 };
 
-module.exports = { signUpBodyValidation, loginBodyValidation, refreshTokenBodyValidation };
+export { signUpBodyValidation, loginBodyValidation, refreshTokenBodyValidation };

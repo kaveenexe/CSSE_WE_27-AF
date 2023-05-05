@@ -1,41 +1,37 @@
+import express from "express";
+import {config} from "dotenv";
+import authRoutes from "./routes/auth.js";
+import dbConnect from "./dbConnect.js";
+import refreshTokenRoutes from "./routes/refreshToken.js"
+import userRoutes from "./routes/users.js";
 
-const dotenv = require("dotenv");
-dotenv.config();
+import cors from "cors";
 
-const express = require("express");
-
-
-const authRoutes = require("./routes/auth.js");
-const refreshTokenRoutes = require("./routes/refreshToken.js");
-const userRoutes = require("./routes/users.js");
-const connectDB = require("./config/db.js");
 
 
 const app = express();
 
-// const cart = require("./routes/cartRoute"); // added
+//allows us access environment variables like dotenv files
+config();
 
-var cors = require('cors')
+dbConnect();
 
-app.use(cors())
 
-// connect database
-connectDB();
+//allows us get json object in request body
+app.use(express.json());
+// parse requests of content-type - application/x-www-form-urlencoded
+app.use(express.urlencoded({
+  extended: true
+}));
+app.use(cors());
 
 app.use("/api", authRoutes);
 app.use("/api/refreshToken", refreshTokenRoutes);
 app.use("/api/users", userRoutes);
 
-// initialize middleware
-app.use(express.json({ extended: false }));
-app.get("/", (req, res) => res.send("Server up and running"));
 
 
-// app.use("/api/cart", cart); 
 
-// setting up port
-const PORT = process.env.PORT || 8000;
+const port = process.env.PORT || 8080;
+app.listen(port, ()=> console.log(`Listening on port ${port}...`));
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-}); 

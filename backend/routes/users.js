@@ -1,7 +1,7 @@
-const { Router } = require("express");
-const auth = require("../middleware/auth");
-const roleCheck = require("../middleware/roleCheck");
-const User = require("../models/User");
+import { Router } from "express";
+import auth from "../middleware/auth.js";
+import roleCheck from "../middleware/roleCheck.js";
+import User from "../models/User.js";
 
 const router = Router();
 
@@ -52,4 +52,5 @@ router.get('/isAdmin/:id', async (req, res) => {
 });
 
 
-module.exports = router;
+
+export default router;

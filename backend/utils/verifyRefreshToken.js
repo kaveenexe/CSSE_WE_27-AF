@@ -1,5 +1,5 @@
-const UserToken = require("../models/UserToken.js");
-const jwt = require("jsonwebtoken");
+import UserToken from "../models/UserToken.js";
+import jwt from "jsonwebtoken";
 
 const verifyRefreshToken = (refreshToken) => {
 
@@ -27,4 +27,4 @@ const verifyRefreshToken = (refreshToken) => {
     });
 };
 
-module.exports = verifyRefreshToken;
+export default verifyRefreshToken;
