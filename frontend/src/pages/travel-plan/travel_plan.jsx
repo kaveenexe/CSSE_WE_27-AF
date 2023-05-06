@@ -8,6 +8,7 @@ import Packages from "../../components/Admin/Packages.jsx";
 import Requests from "../../components/Admin/Requests.jsx";
 import Vouchers from "../../components/Admin/Vouchers.jsx";
 import Places from "../../components/Admin/Places.jsx";
+import Donations from "../../components/Admin/Donations.jsx";
 import Footer from "../../components/Home/footer.jsx";
 import "./travel-style.css";
 
@@ -90,6 +91,19 @@ export default function TravelPlan() {
                     Places
                   </Nav.Link>
                 </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
+                    className="nav-link"
+                    eventKey="sixth"
+                    style={{
+                      fontWeight: "100",
+                      fontFamily: "Lucida Sans",
+                      fontSize: "15px",
+                    }}
+                  >
+                    Donations
+                  </Nav.Link>
+                </Nav.Item>
               </Nav>
             </Col>
             <Col sm={9}>
@@ -143,6 +157,16 @@ export default function TravelPlan() {
                   }}
                 >
                   <Places />
+                </Tab.Pane>
+                <Tab.Pane
+                  eventKey="sixth"
+                  style={{
+                    fontWeight: "100",
+                    fontFamily: "Lucida Sans",
+                    fontSize: "15px",
+                  }}
+                >
+                  <Donations />
                 </Tab.Pane>
               </Tab.Content>
             </Col>

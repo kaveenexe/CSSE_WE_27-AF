@@ -1,6 +1,10 @@
 import React from "react";
 import Header from "../Payment/Header";
-import { TextField } from "@mui/material";
+import {TextField} from "@mui/material";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import Button from "react-bootstrap/Button";
 import "./admin-styles.css";
 
 const Packages = () => {
@@ -101,6 +105,139 @@ const Packages = () => {
         />
         <br />
         <br />
+        <div>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formHorizontalName"
+            >
+              <Form.Label
+                column
+                sm={2}
+                style={{
+                  fontSize: "0.9rem",
+                  fontWeight: 500,
+                  fontFamily: "Lucida Sans",
+                }}
+              >
+                Package Number
+              </Form.Label>
+              <Col sm={10}>
+                <Form.Control
+                  type="text"
+                  placeholder="Package Number"
+                  style={{
+                    fontSize: "0.9rem",
+                    fontWeight: 100,
+                    fontFamily: "Lucida Sans",
+                    width: 972,
+                  }}
+                />
+              </Col>
+            </Form.Group>
+
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formHorizontalName"
+            >
+              <Form.Label
+                column
+                sm={2}
+                style={{
+                  fontSize: "0.9rem",
+                  fontWeight: 500,
+                  fontFamily: "Lucida Sans",
+                }}
+              >
+                Package Price (Rs.)
+              </Form.Label>
+              <Col sm={10}>
+                <Form.Control
+                  type="text"
+                  placeholder="Package price in Sri Lankan Rupees (Ex: 3500.00)"
+                  style={{
+                    fontSize: "0.9rem",
+                    fontWeight: 100,
+                    fontFamily: "Lucida Sans",
+                    width: 972,
+                  }}
+                />
+              </Col>
+            </Form.Group>
+
+            <Form.Group as={Row} className="mb-3">
+              <Form.Label
+                column
+                sm={2}
+                style={{
+                  fontSize: "0.9rem",
+                  fontWeight: 500,
+                  fontFamily: "Lucida Sans",
+                }}
+              >
+                Description
+              </Form.Label>
+              <Col sm={10}>
+                <Form.Control
+                  as="textarea"
+                  rows={1}
+                  placeholder="Enter small description about the package"
+                  style={{
+                    fontSize: "0.9rem",
+                    fontWeight: 100,
+                    fontFamily: "Lucida Sans",
+                    width: 972,
+                  }}
+                />
+              </Col>
+            </Form.Group>
+
+            <Form.Group as={Row} className="mb-3">
+              <Form.Label
+                column
+                sm={2}
+                style={{
+                  fontSize: "0.9rem",
+                  fontWeight: 500,
+                  fontFamily: "Lucida Sans",
+                }}
+              >
+                Package Details
+              </Form.Label>
+              <Col sm={10}>
+                <Form.Control
+                  as="textarea"
+                  rows={6}
+                  placeholder="Enter your package details"
+                  style={{
+                    fontSize: "0.9rem",
+                    fontWeight: 100,
+                    fontFamily: "Lucida Sans",
+                    width: 972,
+                  }}
+                />
+              </Col>
+            </Form.Group>
+
+            <div className="admin_form_button_div">
+              <Button
+                variant="primary"
+                type="submit"
+                className="admin_form_button"
+                style={{
+                  fontSize: "1rem",
+                  fontWeight: 100,
+                  fontFamily: "Lucida Sans",
+                  marginRight: "1.3rem",
+                }}
+              >
+                SUBMIT
+              </Button>
+            </div>
+          </Form>
+        </div>
       </div>
     </div>
   );
