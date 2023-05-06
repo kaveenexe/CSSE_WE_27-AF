@@ -6,6 +6,8 @@ import MyProfile from './pages/package/MyProfile';
 import SinglePackage from './pages/package/SinglePackage';
 import Blog from './pages/blogs/blogmain';
 import Home from './pages/home';
+import TravelPlace from './pages/travelPlaces/places';
+import Feedback from './pages/travelPlaces/feedback';
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import { Context } from "./Context";
@@ -118,6 +120,8 @@ function App() {
           <Route path="/blogs" element={<Blog />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/travel-places" element={<TravelPlace />} />
+          <Route path="/feedback" element={<Feedback />} />
         </Routes>
       </div>
         
