@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../components/navbar.jsx";
+// import Navbar from "../../components/navbar.jsx";
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from "react-bootstrap/Button";
@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 export default function TravelPlace() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       
       <div class="container-fluid h-custom h-100">
         <div class="row d-flex justify-content-center align-items-center h-100s h-100">
