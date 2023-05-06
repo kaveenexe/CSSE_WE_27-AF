@@ -18,7 +18,7 @@ export default function earn() {
             Your feedback is vital in shaping unforgettable experiences for
             future travelers. Share your valuable insights and help us create
             enchanting adventures that exceed expectations!<br /><br />
-            <Button>Give Feedback</Button>
+            <Button className="button_styles">Give Feedback</Button>
           </ListGroup.Item>
         </ListGroup>
       </Card>
@@ -33,7 +33,7 @@ export default function earn() {
             Your blog is vital in shaping unforgettable experiences for
             future travelers. Share your valuable insights and help us create
             enchanting adventures that exceed expectations!<br /><br />
-            <Button><Link className="link_path" to="/blogs">Post a Blog</Link></Button>
+            <Button className="button_styles"><Link className="link_path" to="/blogs">Post a Blog</Link></Button>
           </ListGroup.Item>
         </ListGroup>
       </Card>

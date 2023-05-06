@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
-
+mongoose.set('strictQuery', false);
 const dbConnect = ()=>{
     const connectionParams = { useNewUrlParser: true, useUnifiedTopology: true };
-    mongoose.connect(process.env.DB, connectionParams);
+    mongoose.connect(process.env.MONGO_URL, connectionParams);
 
 
     //listens to the mongodb event "connected"

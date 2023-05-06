@@ -5,6 +5,7 @@ import dbConnect from "./dbConnect.js";
 import refreshTokenRoutes from "./routes/refreshToken.js"
 import transactionRoutes from "./routes/transaction.js"
 import userRoutes from "./routes/users.js";
+import BlogRout from "./routes/blog/blog-route.js"
 
 import cors from "cors";
 
@@ -27,6 +28,8 @@ app.use("/api", authRoutes);
 app.use("/api/refreshToken", refreshTokenRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/transaction", transactionRoutes);
+
+app.use("/blog", BlogRout);
 
 const port = process.env.PORT || 8080;
 app.listen(port, ()=> console.log(`Listening on port ${port}...`));

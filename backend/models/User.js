@@ -24,7 +24,15 @@ const userSchema = new Schema({
     },
     isAdmin:{
         type: Boolean
-    }
+    },
+    userPoints:{
+        type: Number,
+        default: 0
+    },
+    userVouchers:{
+        type: Array,
+        default: []
+    },
 });  
 
 const User = mongoose.model("User", userSchema);
